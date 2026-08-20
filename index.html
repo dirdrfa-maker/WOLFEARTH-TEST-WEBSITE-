@@ -599,22 +599,225 @@ animate();
         });
 </script>
 <script>
+const translations = {
+
+    fr: {
+        "pack wolfearth school trade": "pack wolfearth school trade",
+        "French": "Français",
+        "Arabic": "Arabe",
+        "best school": "meilleure école",
+
+        "MASTER THE MARKET.": "MAÎTRISEZ LE MARCHÉ.",
+        "BUILD YOUR FUTURE.": "CONSTRUISEZ VOTRE AVENIR.",
+
+        "Learn professional trading strategies, risk management, market analysis and advanced trading concepts through structured courses, live classes and exclusive VIP education.":
+        "Apprenez les stratégies de trading professionnelles, la gestion des risques, l’analyse du marché et les concepts avancés du trading grâce à des cours structurés, des sessions en direct et une formation VIP exclusive.",
+
+        "join telegram vip": "rejoindre le VIP Telegram",
+
+        "Courses": "Cours",
+        "Lessons": "Leçons",
+        "Live Classes": "Cours en direct",
+        "Community": "Communauté",
+
+        "WHY WOLFARTH?": "POURQUOI WOLFARTH ?",
+
+        "Professional Education": "Formation professionnelle",
+        "Curriculum designed by elite institutional traders focusing on real-world market dynamics.":
+        "Programme conçu par des traders institutionnels expérimentés, axé sur la réalité des marchés.",
+
+        "Practical Learning": "Apprentissage pratique",
+        "Hands-on application of strategies with simulated environments and live market analysis.":
+        "Application pratique des stratégies avec des environnements simulés et une analyse en direct du marché.",
+
+        "Live Education": "Formation en direct",
+        "Daily live streams, market breakdowns, and real-time Q&A sessions with senior analysts.":
+        "Diffusions en direct quotidiennes, analyses des marchés et sessions de questions-réponses en temps réel avec des analystes expérimentés.",
+
+        "Exclusive Community": "Communauté exclusive",
+        "Join a network of driven individuals in our private VIP channels sharing alpha daily.":
+        "Rejoignez un réseau de personnes motivées dans nos canaux VIP privés partageant des analyses chaque jour.",
+
+        "OUR CURRICULUM": "NOTRE PROGRAMME",
+
+        "Most Popular": "LE PLUS POPULAIRE",
+
+        "THE ULTIMATE TRADING BUNDLE": "LE PACK ULTIME DE TRADING",
+
+        "Get full access to all six core courses: Trading Fundamentals, Technical Analysis, Smart Money Concepts, Risk Management, Trading Psychology, and Advanced Strategy.":
+        "Accédez à nos six cours principaux : fondamentaux du trading, analyse technique, Smart Money Concepts, gestion des risques, psychologie du trading et stratégie avancée.",
+
+        "6 Full Courses": "6 cours complets",
+        "Lifetime Access": "Accès à vie",
+        "VIP Community Access": "Accès à la communauté VIP",
+        "Live Weekly Sessions": "Sessions hebdomadaires en direct",
+        "VIP Telegram Signals": "Signaux VIP Telegram",
+
+        "TOTAL VALUE $1,594": "VALEUR TOTALE 1 594 $",
+        "GET THE PACK": "OBTENIR LE PACK",
+        "One-time payment. No recurring fees.": "Paiement unique. Aucun frais récurrent.",
+
+        "READ THE MARKET.": "LISEZ LE MARCHÉ.",
+        "CONTROL YOUR DECISIONS.": "CONTRÔLEZ VOS DÉCISIONS.",
+
+        "Stop guessing. Learn to read price action, liquidity sweeps, and institutional order flow. We equip you with the terminal-level knowledge required to execute trades with surgical precision.":
+        "Arrêtez de deviner. Apprenez à lire l’action des prix, les balayages de liquidité et les flux d’ordres institutionnels. Nous vous donnons les connaissances nécessaires pour exécuter vos trades avec précision.",
+
+        "VIEW CURRICULUM": "VOIR LE PROGRAMME",
+
+        "TERMS OF SERVICE": "CONDITIONS D’UTILISATION",
+        "Privacy Policy": "POLITIQUE DE CONFIDENTIALITÉ",
+        "Contact Support": "CONTACTER LE SUPPORT",
+
+        "© 2024 WOLFARTH SCHOOL TRADE. FOR THE ELITE ONLY.":
+        "© 2024 WOLFARTH SCHOOL TRADE. POUR L’ÉLITE UNIQUEMENT."
+    },
+
+    ar: {
+        "pack wolfearth school trade": "باقة ولفارث لتعليم التداول",
+        "French": "الفرنسية",
+        "Arabic": "العربية",
+        "best school": "أفضل مدرسة",
+
+        "MASTER THE MARKET.": "أتقن السوق.",
+        "BUILD YOUR FUTURE.": "ابنِ مستقبلك.",
+
+        "Learn professional trading strategies, risk management, market analysis and advanced trading concepts through structured courses, live classes and exclusive VIP education.":
+        "تعلم استراتيجيات التداول الاحترافية وإدارة المخاطر وتحليل الأسواق ومفاهيم التداول المتقدمة من خلال دورات منظمة وحصص مباشرة وتعليم VIP حصري.",
+
+        "join telegram vip": "انضم إلى VIP على تيليجرام",
+
+        "Courses": "الدورات",
+        "Lessons": "الدروس",
+        "Live Classes": "الحصص المباشرة",
+        "Community": "المجتمع",
+
+        "WHY WOLFARTH?": "لماذا ولفارث؟",
+
+        "Professional Education": "تعليم احترافي",
+        "Curriculum designed by elite institutional traders focusing on real-world market dynamics.":
+        "منهج تعليمي صممه متداولون مؤسساتيون محترفون ويركز على واقع حركة الأسواق.",
+
+        "Practical Learning": "تعلم عملي",
+        "Hands-on application of strategies with simulated environments and live market analysis.":
+        "تطبيق عملي للاستراتيجيات من خلال بيئات محاكاة وتحليل مباشر للأسواق.",
+
+        "Live Education": "تعليم مباشر",
+        "Daily live streams, market breakdowns, and real-time Q&A sessions with senior analysts.":
+        "بث مباشر يومي وتحليل للأسواق وجلسات أسئلة وأجوبة مباشرة مع محللين محترفين.",
+
+        "Exclusive Community": "مجتمع حصري",
+        "Join a network of driven individuals in our private VIP channels sharing alpha daily.":
+        "انضم إلى شبكة من الأشخاص الطموحين داخل قنوات VIP الخاصة بنا لمشاركة التحليلات يومياً.",
+
+        "OUR CURRICULUM": "منهجنا التعليمي",
+
+        "Most Popular": "الأكثر شعبية",
+
+        "THE ULTIMATE TRADING BUNDLE": "باقة التداول الشاملة",
+
+        "Get full access to all six core courses: Trading Fundamentals, Technical Analysis, Smart Money Concepts, Risk Management, Trading Psychology, and Advanced Strategy.":
+        "احصل على وصول كامل إلى الدورات الأساسية الست: أساسيات التداول، التحليل الفني، مفاهيم الأموال الذكية، إدارة المخاطر، علم نفس التداول والاستراتيجية المتقدمة.",
+
+        "6 Full Courses": "6 دورات كاملة",
+        "Lifetime Access": "وصول مدى الحياة",
+        "VIP Community Access": "الوصول إلى مجتمع VIP",
+        "Live Weekly Sessions": "جلسات مباشرة أسبوعية",
+        "VIP Telegram Signals": "إشارات VIP على تيليجرام",
+
+        "TOTAL VALUE $1,594": "القيمة الإجمالية 1,594 دولار",
+        "GET THE PACK": "احصل على الباقة",
+        "One-time payment. No recurring fees.": "دفع مرة واحدة. بدون رسوم متكررة.",
+
+        "READ THE MARKET.": "اقرأ السوق.",
+        "CONTROL YOUR DECISIONS.": "تحكم في قراراتك.",
+
+        "Stop guessing. Learn to read price action, liquidity sweeps, and institutional order flow. We equip you with the terminal-level knowledge required to execute trades with surgical precision.":
+        "توقف عن التخمين. تعلم قراءة حركة السعر واكتساحات السيولة وتدفق أوامر المؤسسات. نمنحك المعرفة المتقدمة اللازمة لتنفيذ صفقاتك بدقة عالية.",
+
+        "VIEW CURRICULUM": "عرض المنهج",
+
+        "TERMS OF SERVICE": "شروط الخدمة",
+        "Privacy Policy": "سياسة الخصوصية",
+        "Contact Support": "التواصل مع الدعم",
+
+        "© 2024 WOLFARTH SCHOOL TRADE. FOR THE ELITE ONLY.":
+        "© 2024 WOLFARTH SCHOOL TRADE. للنخبة فقط."
+    }
+};
+
+
+/* حفظ النص الأصلي للصفحة */
+document.querySelectorAll("body *").forEach(element => {
+
+    if (element.children.length === 0) {
+        element.dataset.originalText = element.textContent.trim();
+    }
+
+});
+
+
 function setLanguage(language) {
 
+    document.querySelectorAll("body *").forEach(element => {
+
+        if (element.children.length === 0) {
+
+            const originalText = element.dataset.originalText;
+
+            if (!originalText) return;
+
+            if (language === "en") {
+                element.textContent = originalText;
+            }
+
+            else if (translations[language][originalText]) {
+                element.textContent = translations[language][originalText];
+            }
+
+        }
+
+    });
+
+
+    /* اتجاه الصفحة */
     if (language === "ar") {
+
         document.documentElement.lang = "ar";
         document.documentElement.dir = "rtl";
 
-        alert("Arabic selected");
+        document.body.classList.add("arabic-page");
+
     }
 
-    if (language === "fr") {
+    else {
+
         document.documentElement.lang = "fr";
         document.documentElement.dir = "ltr";
 
-        alert("French selected");
+        document.body.classList.remove("arabic-page");
+
     }
+
+
+    /* حفظ اللغة */
+    localStorage.setItem("wolfarth-language", language);
 }
+
+
+/* اللغة المحفوظة */
+document.addEventListener("DOMContentLoaded", function() {
+
+    const savedLanguage =
+        localStorage.getItem("wolfarth-language");
+
+    if (savedLanguage === "ar" || savedLanguage === "fr") {
+
+        setLanguage(savedLanguage);
+
+    }
+
+});
 </script>
 
-</body>  </html>
+</body> </html>
