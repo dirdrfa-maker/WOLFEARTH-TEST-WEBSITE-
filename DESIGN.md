@@ -1,176 +1,163 @@
 ---
-name: Cyber-Luxury Trading Identity
+name: Apex Predator Aesthetic
 colors:
-  surface: '#131313'
-  surface-dim: '#131313'
-  surface-bright: '#3a3939'
-  surface-container-lowest: '#0e0e0e'
-  surface-container-low: '#1c1b1b'
-  surface-container: '#201f1f'
-  surface-container-high: '#2a2a2a'
-  surface-container-highest: '#353534'
-  on-surface: '#e5e2e1'
-  on-surface-variant: '#e6bdbc'
-  inverse-surface: '#e5e2e1'
-  inverse-on-surface: '#313030'
-  outline: '#ac8888'
-  outline-variant: '#5c3f3f'
-  surface-tint: '#ffb3b3'
-  primary: '#ffb3b3'
-  on-primary: '#680015'
-  primary-container: '#dc143c'
-  on-primary-container: '#fff1f0'
-  inverse-primary: '#bf0030'
-  secondary: '#ffffff'
-  on-secondary: '#003737'
-  secondary-container: '#00fbfb'
-  on-secondary-container: '#007070'
-  tertiary: '#ffb4a8'
-  on-tertiary: '#690000'
-  tertiary-container: '#cd3828'
-  on-tertiary-container: '#fff1ef'
+  surface: '#131314'
+  surface-dim: '#131314'
+  surface-bright: '#3a393a'
+  surface-container-lowest: '#0e0e0f'
+  surface-container-low: '#1c1b1c'
+  surface-container: '#201f20'
+  surface-container-high: '#2a2a2b'
+  surface-container-highest: '#353436'
+  on-surface: '#e5e2e3'
+  on-surface-variant: '#e8bcb6'
+  inverse-surface: '#e5e2e3'
+  inverse-on-surface: '#313031'
+  outline: '#ae8782'
+  outline-variant: '#5e3f3b'
+  surface-tint: '#ffb4aa'
+  primary: '#ffb4aa'
+  on-primary: '#690003'
+  primary-container: '#e61919'
+  on-primary-container: '#fffbff'
+  inverse-primary: '#c0000b'
+  secondary: '#98cbff'
+  on-secondary: '#003354'
+  secondary-container: '#00a2fd'
+  on-secondary-container: '#003558'
+  tertiary: '#fbbc09'
+  on-tertiary: '#402d00'
+  tertiary-container: '#956e00'
+  on-tertiary-container: '#fffbff'
   error: '#ffb4ab'
   on-error: '#690005'
   error-container: '#93000a'
   on-error-container: '#ffdad6'
-  primary-fixed: '#ffdad9'
-  primary-fixed-dim: '#ffb3b3'
-  on-primary-fixed: '#40000a'
-  on-primary-fixed-variant: '#920022'
-  secondary-fixed: '#00fbfb'
-  secondary-fixed-dim: '#00dddd'
-  on-secondary-fixed: '#002020'
-  on-secondary-fixed-variant: '#004f4f'
-  tertiary-fixed: '#ffdad4'
-  tertiary-fixed-dim: '#ffb4a8'
-  on-tertiary-fixed: '#410000'
-  on-tertiary-fixed-variant: '#920703'
-  background: '#131313'
-  on-background: '#e5e2e1'
-  surface-variant: '#353534'
+  primary-fixed: '#ffdad5'
+  primary-fixed-dim: '#ffb4aa'
+  on-primary-fixed: '#410001'
+  on-primary-fixed-variant: '#930006'
+  secondary-fixed: '#cfe5ff'
+  secondary-fixed-dim: '#98cbff'
+  on-secondary-fixed: '#001d33'
+  on-secondary-fixed-variant: '#004a77'
+  tertiary-fixed: '#ffdea0'
+  tertiary-fixed-dim: '#fbbc09'
+  on-tertiary-fixed: '#261a00'
+  on-tertiary-fixed-variant: '#5c4300'
+  background: '#131314'
+  on-background: '#e5e2e3'
+  surface-variant: '#353436'
 typography:
   display-lg:
-    fontFamily: Sora
+    fontFamily: Anton
     fontSize: 72px
-    fontWeight: '800'
+    fontWeight: '400'
     lineHeight: 80px
-    letterSpacing: -0.02em
-  display-lg-mobile:
-    fontFamily: Sora
-    fontSize: 40px
-    fontWeight: '800'
-    lineHeight: 48px
-    letterSpacing: -0.01em
+    letterSpacing: 0.02em
   headline-xl:
-    fontFamily: Sora
+    fontFamily: Anton
     fontSize: 48px
-    fontWeight: '700'
+    fontWeight: '400'
     lineHeight: 56px
-  headline-lg:
-    fontFamily: Sora
+    letterSpacing: 0.03em
+  headline-xl-mobile:
+    fontFamily: Anton
     fontSize: 32px
-    fontWeight: '600'
+    fontWeight: '400'
     lineHeight: 40px
+  headline-md:
+    fontFamily: Anton
+    fontSize: 24px
+    fontWeight: '400'
+    lineHeight: 32px
   body-lg:
-    fontFamily: Inter
+    fontFamily: Geist
     fontSize: 18px
     fontWeight: '400'
     lineHeight: 28px
   body-md:
-    fontFamily: Inter
+    fontFamily: Geist
     fontSize: 16px
     fontWeight: '400'
     lineHeight: 24px
-  label-md:
+  label-data:
     fontFamily: JetBrains Mono
     fontSize: 14px
     fontWeight: '500'
     lineHeight: 20px
     letterSpacing: 0.05em
   label-sm:
-    fontFamily: JetBrains Mono
+    fontFamily: Geist
     fontSize: 12px
-    fontWeight: '500'
+    fontWeight: '600'
     lineHeight: 16px
-    letterSpacing: 0.1em
-rounded:
-  sm: 0.125rem
-  DEFAULT: 0.25rem
-  md: 0.375rem
-  lg: 0.5rem
-  xl: 0.75rem
-  full: 9999px
 spacing:
-  unit: 8px
+  unit: 4px
   container-max: 1440px
   gutter: 24px
   margin-desktop: 64px
-  margin-mobile: 20px
-  stack-sm: 12px
-  stack-md: 24px
-  stack-lg: 48px
+  margin-mobile: 16px
 ---
 
 ## Brand & Style
-The design system establishes a high-stakes, cinematic environment for premium trading education. The brand personality is aggressive yet disciplined, merging the high-tech aesthetics of a cyberpunk future with the exclusivity of luxury finance. The target audience includes sophisticated traders seeking an elite, immersive learning experience.
 
-The visual style is a fusion of **Glassmorphism** and **High-Contrast / Bold** modernism. It utilizes deep spatial depth, 3D layering, and atmospheric neon lighting to create a UI that feels like a futuristic trading floor. Every interface element is treated as a physical, light-emitting object within a dark, multi-dimensional space.
+This design system is built for "Wolfearth School Trade," targeting a demographic that values high-performance, intensity, and competitive edge. The brand personality is aggressive, decisive, and commanding. It draws heavily from **High-Contrast / Bold** and **Cyberpunk-inspired Modernism**, utilizing a "dark mode by default" philosophy to create a focused, high-stakes trading environment.
+
+The UI should evoke a sense of power and predatory precision. We achieve this through:
+- **Sharp Geometry:** Mirroring the jagged, aggressive lines of the wolf logo.
+- **Kinetic Energy:** Using vibrant accent colors against obsidian backdrops to draw focus to critical data.
+- **High-Performance Cues:** Subtle glows and neon "status" indicators that suggest a live, breathing market ecosystem.
 
 ## Colors
-The palette is rooted in a "Void Black" foundation to maximize the luminosity of accent colors. 
 
-- **Primary (Crimson Red):** Used for critical actions, bearish indicators, and primary branding. It represents energy, risk, and the "Wolf" spirit.
-- **Secondary (Electric Blue):** Used for bullish indicators, data visualization, and interactive highlights. It provides a high-tech, digital contrast to the red.
-- **Tertiary (Blood Red):** A deeper, darker red used for subtle background glows and low-priority warning states.
-- **Neutrals:** Dark Charcoal and Metallic Gray provide the structural surfaces, ensuring the neon accents pop without causing visual fatigue.
-- **Glows:** All interactive elements should feature a 15-30% opacity bloom effect using the Primary or Secondary colors.
+The palette is engineered for maximum visual impact and immediate cognitive processing of financial data.
+
+- **Primary (Blood Red):** Used for critical actions, sell signals, and high-urgency alerts. It is the color of the "hunt."
+- **Secondary (Electric Blue):** Used for buy signals, progress indicators, and interactive elements. It provides a technical, digital contrast to the primal red.
+- **Tertiary (Wolf Eye Gold):** Reserved for highlights, warnings, or special achievement tiers.
+- **Neutrals:** A range of "Obsidian" blacks (#050505) and "Charcoal" grays (#1A1A1C) are used for surfaces to ensure the accent colors "pop" with maximum intensity.
 
 ## Typography
-The typography system balances futuristic geometry with technical precision. 
 
-**Sora** is the display typeface, chosen for its wide, geometric stance and "tech-luxe" feel. It should be used for all major headings and branding. **Inter** handles all body copy to ensure maximum legibility during complex data analysis. **JetBrains Mono** is utilized for labels, data points, and trading figures to evoke a developer-centric, high-accuracy environment.
+The typographic scale is designed for readability and dominance. 
 
-Headlines should occasionally use uppercase styling with increased letter spacing for a more cinematic, architectural look.
+- **Headlines:** Uses **Anton** for its condensed, impactful, and aggressive stature. Headlines should frequently use `uppercase` to maintain the authoritative voice.
+- **Body:** Uses **Geist** for a clean, technical, and highly legible experience during long reading sessions or complex data analysis.
+- **Data/Labels:** Uses **JetBrains Mono** for all numerical data, tickers, and price points. The monospaced nature ensures that fluctuating numbers do not cause layout shifts and feel "engineered."
 
 ## Layout & Spacing
-The layout follows a **Fixed Grid** model on desktop to maintain the precision of a professional terminal, transitioning to a fluid stack on mobile. 
 
-A 12-column grid is used for the main dashboard, while individual educational modules utilize a "Centric Focus" layout with wide margins to emphasize 3D assets. Spacing is generous to allow the "glow" of components to breathe without overlapping. 
+The design system utilizes a **12-column fluid grid** with a tight, efficient spacing rhythm.
 
-**Breakpoints:**
-- Mobile: < 768px (4 columns, 20px margins)
-- Tablet: 768px - 1280px (8 columns, 40px margins)
-- Desktop: > 1280px (12 columns, 64px margins)
+- **Density:** The UI is high-density, maximizing the information visible on-screen at once. 
+- **Grid Models:** On desktop, use a 12-column grid with 24px gutters. On mobile, transition to a 4-column grid with 16px margins.
+- **Rhythm:** All spacing is based on a 4px baseline unit. Internal component padding should be tight (e.g., 8px or 12px) to maintain the "high-performance dashboard" feel.
 
 ## Elevation & Depth
-Depth is the core of this design system. It is achieved through **Glassmorphism** and **Ambient Glows**:
 
-1.  **Level 0 (Floor):** Pure black (#000000) with a faint, scrolling neon grid in Electric Blue at 5% opacity.
-2.  **Level 1 (Card Base):** Dark Charcoal (#0D0D0D) with a 1px border of Metallic Gray at 20% opacity.
-3.  **Level 2 (Floating Glass):** Semi-transparent surfaces (10-15% opacity) with a `backdrop-filter: blur(20px)`. These elements have a top-down linear gradient border to simulate light catching the "edge" of the glass.
-4.  **Shadows:** Shadows are replaced by "Glows." Instead of dark offsets, elevated elements emit a soft, diffused bloom of Crimson or Electric Blue, indicating their active state or importance.
+In a dark, aggressive UI, traditional shadows are replaced by **Tonal Layering** and **Luminescence**.
+
+- **Surface Levels:** 
+    - **L0 (Base):** #050505 (Pure black background).
+    - **L1 (Cards/Panels):** #0D0D0E (Subtle dark gray).
+    - **L2 (Popovers/Modals):** #161618 (Slightly lighter, with a subtle border).
+- **Glow Effects:** Critical elements (like active trade buttons or "Live" indicators) utilize a `0px 0px 15px` outer glow in the primary or secondary color to simulate a digital screen effect.
+- **Borders:** Instead of heavy shadows, use 1px solid borders (#222) to define edges. For active states, these borders should glow with the primary accent color.
 
 ## Shapes
-The shape language is sharp and technical. While a small radius (0.25rem) is used for standard UI components to keep them professional, specific "action" elements like primary buttons and 3D glass cards use hard geometric angles or very slight chamfers to maintain a futuristic edge.
 
-Interactive elements should use a "Magnetic" hover effect, where the element slightly pulls towards the cursor, reinforcing the 3D physicality of the interface.
+The shape language is strictly **Sharp (0px)**. 
+
+To mirror the aggressive "fangs" and "claws" of the brand's wolf mascot, all buttons, input fields, cards, and containers must have 90-degree corners. Rounded corners are prohibited as they soften the brand's "predatory" edge. 
+
+For decorative elements, use diagonal "cut-outs" or chamfered corners (45-degree angles) on buttons and tabs to reinforce the high-tech, aggressive aesthetic.
 
 ## Components
 
-### Magnetic Buttons
-Buttons feature a high-gloss finish. The primary button (Crimson Red) has a "Neon Pulse" animation on hover. Use `JetBrains Mono` for button text to maintain the technical aesthetic.
-
-### 3D Glass Cards
-Cards are the primary container. They must feature a subtle inner glow and a 1px "Refractive" border. On hover, the card should slightly tilt in 3D space based on the mouse position.
-
-### Animated Trading Charts
-Charts should use Electric Blue for gains and Crimson Red for losses. Lines should have a "trailing glow" effect, where the most recent data point emits a small light source.
-
-### Input Fields
-Inputs are "Ghost" style—transparent backgrounds with only a bottom border that illuminates in Electric Blue when focused. Labels should be small, uppercase `JetBrains Mono` positioned above the input.
-
-### Glowing Grid
-A background component consisting of a 3D perspective grid. The grid lines should flicker slightly to mimic a digital mainframe.
-
-### Progress Chips
-Small, pill-shaped indicators for course progress or market status. Use high-saturation colors with a heavy blur shadow (bloom) to make them appear like glowing LEDs.
+- **Buttons:** Primary buttons use a solid #E61919 background with white Anton text. Use a "cut-corner" clip-path on the top-right to add aggression. Hover states should trigger a red outer glow.
+- **Input Fields:** Obsidian background (#0A0A0B) with a 1px #333 border. On focus, the border changes to Electric Blue with a subtle inner glow.
+- **Cards:** No background color or a very dark gray (#0D0D0E). Use a top-accent border (2px) in the secondary color to denote category.
+- **Chips/Status:** For "Success" or "Buy," use Electric Blue text with a subtle 10% opacity blue background. For "Danger" or "Sell," use Blood Red.
+- **Data Viz:** Charts should use high-contrast lines. Area charts should use gradients that fade from the accent color at the top to transparent at the bottom.
+- **Lists:** High-density rows with 1px divider lines (#1A1A1C). Use JetBrains Mono for all numeric values in the list.
