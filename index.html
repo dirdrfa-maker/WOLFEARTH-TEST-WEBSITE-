@@ -256,7 +256,7 @@
         </div>
 <nav class="hidden md:flex items-center gap-gutter">
 <a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors hover:backdrop-brightness-125 hover:shadow-[0_0_20px_rgba(220,20,60,0.3)] scale-95 active:scale-90 transition-transform duration-300" href="#" onclick="document.getElementById('ultimate-bundle').scrollIntoView({ behavior: 'smooth' }); return false;">pack wolfearth school trade&nbsp; &nbsp;</a>
-<div class="flex items-center gap-4 ml-4 border-l border-outline-variant/30 pl-6"><button class="flex items-center gap-2 font-label-sm text-label-sm text-on-surface-variant hover:text-secondary-fixed transition-all hover:drop-shadow-[0_0_8px_rgba(0,251,251,0.5)] uppercase group"><span class="w-5 h-3.5 bg-surface-container-highest border border-white/10 flex items-center justify-center text-[8px] font-bold group-hover:border-secondary-fixed/50">FR</span><span class="">French</span></button><button class="flex items-center gap-2 font-label-sm text-label-sm text-on-surface-variant hover:text-secondary-fixed transition-all hover:drop-shadow-[0_0_8px_rgba(0,251,251,0.5)] uppercase group"><span class="w-5 h-3.5 bg-surface-container-highest border border-white/10 flex items-center justify-center text-[8px] font-bold group-hover:border-secondary-fixed/50">AR</span><span class="">Arabic</span></button></div></nav>
+<div class="flex items-center gap-4 ml-4 border-l border-outline-variant/30 pl-6"><button onclick="setLanguage('fr')"  class="flex items-center gap-2 font-label-sm text-label-sm text-on-surface-variant hover:text-secondary-fixed transition-all hover:drop-shadow-[0_0_8px_rgba(0,251,251,0.5)] uppercase group"><span class="w-5 h-3.5 bg-surface-container-highest border border-white/10 flex items-center justify-center text-[8px] font-bold group-hover:border-secondary-fixed/50">FR</span><span class="">French</span></button><button onclick="setLanguage('ar')"  class="flex items-center gap-2 font-label-sm text-label-sm text-on-surface-variant hover:text-secondary-fixed transition-all hover:drop-shadow-[0_0_8px_rgba(0,251,251,0.5)] uppercase group"><span class="w-5 h-3.5 bg-surface-container-highest border border-white/10 flex items-center justify-center text-[8px] font-bold group-hover:border-secondary-fixed/50">AR</span><span class="">Arabic</span></button></div></nav>
 <div class="hidden md:flex items-center gap-stack-sm">
 <button class="font-label-md text-label-md bg-primary-container text-on-primary-container px-6 py-2 rounded uppercase font-bold shadow-[0_0_15px_rgba(220,20,60,0.4)] btn-magnetic">
                 best school</button>
@@ -598,6 +598,23 @@ animate();
             });
         });
 </script>
+<script>
+function setLanguage(language) {
 
+    if (language === "ar") {
+        document.documentElement.lang = "ar";
+        document.documentElement.dir = "rtl";
 
-</body></html>
+        alert("Arabic selected");
+    }
+
+    if (language === "fr") {
+        document.documentElement.lang = "fr";
+        document.documentElement.dir = "ltr";
+
+        alert("French selected");
+    }
+}
+</script>
+
+</body>  </html>
