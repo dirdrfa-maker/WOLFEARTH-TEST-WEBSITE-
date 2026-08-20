@@ -1,0 +1,605 @@
+<!DOCTYPE html><html class="dark" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>WOLFARTH SCHOOL TRADE</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Sora:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-container": "#dc143c",
+                        "on-secondary-fixed-variant": "#004f4f",
+                        "error-container": "#93000a",
+                        "error": "#ffb4ab",
+                        "secondary-fixed": "#00fbfb",
+                        "on-error-container": "#ffdad6",
+                        "on-secondary": "#003737",
+                        "on-surface-variant": "#e6bdbc",
+                        "outline": "#ac8888",
+                        "surface-variant": "#353534",
+                        "surface-container": "#201f1f",
+                        "outline-variant": "#5c3f3f",
+                        "surface-container-lowest": "#000000",
+                        "on-primary": "#680015",
+                        "surface-bright": "#3a3939",
+                        "surface-container-low": "#1c1b1b",
+                        "on-primary-fixed-variant": "#920022",
+                        "on-secondary-container": "#007070",
+                        "surface-dim": "#000000",
+                        "inverse-primary": "#bf0030",
+                        "on-surface": "#e5e2e1",
+                        "primary-fixed-dim": "#ffb3b3",
+                        "tertiary-container": "#cd3828",
+                        "on-tertiary": "#690000",
+                        "surface": "#000000",
+                        "primary": "#ffb3b3",
+                        "surface-container-highest": "#353534",
+                        "on-secondary-fixed": "#002020",
+                        "surface-container-high": "#2a2a2a",
+                        "secondary-container": "#00fbfb",
+                        "tertiary-fixed-dim": "#ffb4a8",
+                        "on-primary-fixed": "#40000a",
+                        "inverse-on-surface": "#313030",
+                        "on-error": "#690005",
+                        "on-tertiary-container": "#fff1ef",
+                        "surface-tint": "#ffb3b3",
+                        "on-tertiary-fixed-variant": "#920703",
+                        "background": "#000000",
+                        "secondary": "#ffffff",
+                        "tertiary": "#ffb4a8",
+                        "secondary-fixed-dim": "#00dddd",
+                        "inverse-surface": "#e5e2e1",
+                        "tertiary-fixed": "#ffdad4",
+                        "on-background": "#e5e2e1",
+                        "on-tertiary-fixed": "#410000",
+                        "on-primary-container": "#fff1f0",
+                        "primary-fixed": "#ffdad9"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "gutter": "24px",
+                        "stack-sm": "12px",
+                        "margin-mobile": "20px",
+                        "stack-lg": "48px",
+                        "margin-desktop": "64px",
+                        "container-max": "1440px",
+                        "stack-md": "24px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["JetBrains Mono"],
+                        "display-lg": ["Sora"],
+                        "headline-lg": ["Sora"],
+                        "headline-xl": ["Sora"],
+                        "display-lg-mobile": ["Sora"],
+                        "label-sm": ["JetBrains Mono"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "display-lg": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "headline-xl": ["48px", { "lineHeight": "56px", "fontWeight": "700" }],
+                        "display-lg-mobile": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "800" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        /* Ambient Glow & Layout Utilities */
+        body {
+            background-color: #000000;
+            color: theme('colors.on-surface');
+            overflow-x: hidden;
+        }
+
+        .glass-panel {
+            background-color: rgba(13, 13, 13, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .text-glow-primary {
+            text-shadow: 0 0 15px rgba(220, 20, 60, 0.8);
+        }
+
+        .btn-magnetic {
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        .btn-magnetic:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(220, 20, 60, 0.6);
+        }
+
+        .btn-magnetic-secondary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 251, 251, 0.4);
+            border-color: theme('colors.secondary-fixed');
+            color: theme('colors.secondary-fixed');
+        }
+
+        /* Simple animated candle chart simulation */
+        @keyframes pulse-candle {
+            0% { transform: scaleY(1); opacity: 0.8; }
+            50% { transform: scaleY(1.2); opacity: 1; box-shadow: 0 0 20px currentColor; }
+            100% { transform: scaleY(1); opacity: 0.8; }
+        }
+
+        .candle-green { color: theme('colors.secondary-fixed'); animation: pulse-candle 3s infinite ease-in-out alternate; }
+        .candle-red { color: theme('colors.primary-container'); animation: pulse-candle 2.5s infinite ease-in-out alternate-reverse; }
+        
+        /* Grid background effect */
+        .bg-grid-cyber {
+            background-image: 
+                linear-gradient(to right, rgba(0, 251, 251, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(0, 251, 251, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        /* Floating animation for logo */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float {
+            animation: float 4s ease-in-out infinite;
+        }
+
+        /* Entrance Animations */
+        @keyframes fade-in-up {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in-up {
+            animation: fade-in-up 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+        .delay-400 { animation-delay: 400ms; }
+        .delay-500 { animation-delay: 500ms; }
+
+        /* Ambient Glow & Depth Effects for Course Cards */
+        .glass-card {
+            background: rgba(13, 13, 13, 0.4);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-left: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            transform-style: preserve-3d;
+        }
+        
+        .glass-card:hover {
+            box-shadow: 0 0 30px rgba(0, 251, 251, 0.15), inset 0 0 20px rgba(220, 20, 60, 0.1);
+            border-top-color: rgba(0, 251, 251, 0.3);
+            border-left-color: rgba(220, 20, 60, 0.2);
+            transform: translateY(-5px) scale(1.02);
+        }
+
+        .neon-pulse:hover {
+            box-shadow: 0 0 20px rgba(220, 20, 60, 0.6);
+            animation: pulse-glow 2s infinite;
+        }
+
+        @keyframes pulse-glow {
+            0% { box-shadow: 0 0 15px rgba(220, 20, 60, 0.5); }
+            50% { box-shadow: 0 0 25px rgba(220, 20, 60, 0.8), 0 0 10px rgba(255, 255, 255, 0.2) inset; }
+            100% { box-shadow: 0 0 15px rgba(220, 20, 60, 0.5); }
+        }
+
+        /* Utility for 3D Tilt */
+        .tilt-inner {
+            transform: translateZ(30px);
+        }
+    </style>
+<!-- Three.js components -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+        class ThreeJSScene extends HTMLElement {
+            constructor() {
+                super();
+                this.attachShadow({ mode: 'open' });
+                this.container = document.createElement('div');
+                this.container.style.width = '100%';
+                this.container.style.height = '100%';
+                this.shadowRoot.appendChild(this.container);
+            }
+
+            connectedCallback() {
+                const src = this.getAttribute('src');
+                if (src) {
+                    const script = document.createElement('script');
+                    script.textContent = `
+                        (function() {
+                            const container = document.currentScript.parentElement;
+                            ${src}
+                        })();
+                    `;
+                    this.container.appendChild(script);
+                }
+            }
+        }
+        customElements.define('threejs-scene', ThreeJSScene);
+    </script>
+</head>
+<body class="antialiased min-h-screen flex flex-col bg-grid-cyber bg-black">
+<!-- TopNavBar Shared Component -->
+<header class="w-full top-0 sticky z-50 bg-black/60 backdrop-blur-xl border-b border-outline-variant/30 shadow-[0_8px_32px_0_rgba(0,0,0,0.8)] flex justify-between items-center px-margin-desktop py-4">
+<div class="font-display-lg text-headline-lg font-black tracking-tighter text-primary-container drop-shadow-[0_0_15px_rgba(220,20,60,0.8)] uppercase">
+            WOLFARTH SCHOOL TRADE
+        </div>
+<nav class="hidden md:flex items-center gap-gutter">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors hover:backdrop-brightness-125 hover:shadow-[0_0_20px_rgba(220,20,60,0.3)] scale-95 active:scale-90 transition-transform duration-300" href="#">pack wolfearth school trade&nbsp; &nbsp;</a>
+
+<div class="flex items-center gap-4 ml-4 border-l border-outline-variant/30 pl-6"><button class="flex items-center gap-2 font-label-sm text-label-sm text-on-surface-variant hover:text-secondary-fixed transition-all hover:drop-shadow-[0_0_8px_rgba(0,251,251,0.5)] uppercase group"><span class="w-5 h-3.5 bg-surface-container-highest border border-white/10 flex items-center justify-center text-[8px] font-bold group-hover:border-secondary-fixed/50">FR</span><span class="">French</span></button><button class="flex items-center gap-2 font-label-sm text-label-sm text-on-surface-variant hover:text-secondary-fixed transition-all hover:drop-shadow-[0_0_8px_rgba(0,251,251,0.5)] uppercase group"><span class="w-5 h-3.5 bg-surface-container-highest border border-white/10 flex items-center justify-center text-[8px] font-bold group-hover:border-secondary-fixed/50">AR</span><span class="">Arabic</span></button></div></nav>
+<div class="hidden md:flex items-center gap-stack-sm">
+<button class="font-label-md text-label-md bg-primary-container text-on-primary-container px-6 py-2 rounded uppercase font-bold shadow-[0_0_15px_rgba(220,20,60,0.4)] btn-magnetic">
+                best school</button>
+</div>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined" style="font-size: 32px;">menu</span>
+</button>
+</header>
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center justify-center overflow-hidden pt-12 md:pt-24">
+<!-- Shader Background -->
+<div class="absolute inset-0 z-0">
+<!-- STITCH_THREEJS_START:ANIMATION_14 class="" -->
+<div class="" style="display:block;width:100%;height:100%;min-height:200px;">
+<script src="https://ajax.googleapis.com/ajax/libs/threejs/r125/three.min.js"></script>
+<div id="threejs-container-ANIMATION_14" style="width:100%;height:100%"><canvas width="1600" height="1857" style="display: block; width: 1280px; height: 1486px;"></canvas></div>
+<script>
+(function() {
+  const container = document.getElementById('threejs-container-ANIMATION_14');
+  const devicePixelRatio = window.devicePixelRatio || 1;
+  
+const width = container.clientWidth || window.innerWidth;
+const height = container.clientHeight || window.innerHeight;
+
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
+const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+
+renderer.setSize(width, height);
+renderer.setPixelRatio(window.devicePixelRatio);
+container.appendChild(renderer.domElement);
+
+// Lights
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.4);
+scene.add(ambientLight);
+
+const pointLightRed = new THREE.PointLight(0xdc143c, 3, 50);
+pointLightRed.position.set(10, 5, 5);
+scene.add(pointLightRed);
+
+const pointLightBlue = new THREE.PointLight(0x00bfff, 3, 50);
+pointLightBlue.position.set(-10, -5, 5);
+scene.add(pointLightBlue);
+
+const spotLight = new THREE.SpotLight(0xffffff, 2);
+spotLight.position.set(0, 10, 10);
+spotLight.angle = Math.PI / 6;
+spotLight.penumbra = 0.1;
+scene.add(spotLight);
+
+// Environment: Particles
+const particlesCount = 2000;
+const posArray = new Float32Array(particlesCount * 3);
+for(let i=0; i < particlesCount * 3; i++) {
+    posArray[i] = (Math.random() - 0.5) * 20;
+}
+const particlesGeo = new THREE.BufferGeometry();
+particlesGeo.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+const particlesMat = new THREE.PointsMaterial({
+    size: 0.015,
+    color: 0xdc143c,
+    transparent: true,
+    opacity: 0.6,
+    blending: THREE.AdditiveBlending
+});
+const particles = new THREE.Points(particlesGeo, particlesMat);
+scene.add(particles);
+
+// Abstract 3D Shapes (Floating Rings/Octahedrons)
+const ringGeo = new THREE.TorusGeometry(8, 0.05, 16, 100);
+const ringMat = new THREE.MeshPhongMaterial({ color: 0x3a3939, transparent: true, opacity: 0.3, wireframe: true });
+const ring = new THREE.Mesh(ringGeo, ringMat);
+scene.add(ring);
+
+const octaGeo = new THREE.OctahedronGeometry(0.5);
+const octaMat = new THREE.MeshStandardMaterial({ color: 0xdc143c, metalness: 0.8, roughness: 0.2 });
+for(let i=0; i<15; i++) {
+    const mesh = new THREE.Mesh(octaGeo, octaMat);
+    mesh.position.set((Math.random()-0.5)*15, (Math.random()-0.5)*15, (Math.random()-0.5)*10 - 5);
+    mesh.rotation.set(Math.random()*Math.PI, Math.random()*Math.PI, 0);
+    scene.add(mesh);
+}
+
+camera.position.z = 10;
+
+// Animation
+let mouseX = 0;
+let mouseY = 0;
+window.addEventListener('mousemove', (e) => {
+    mouseX = (e.clientX / window.innerWidth) - 0.5;
+    mouseY = (e.clientY / window.innerHeight) - 0.5;
+});
+
+function animate() {
+    requestAnimationFrame(animate);
+    const time = Date.now() * 0.0005;
+
+    particles.rotation.y = time * 0.1;
+    ring.rotation.x = time * 0.2;
+    ring.rotation.y = time * 0.1;
+
+    // Camera Motion: Slow zoom and rotation
+    camera.position.x += (mouseX * 2 - camera.position.x) * 0.05;
+    camera.position.y += (-mouseY * 2 - camera.position.y) * 0.05;
+    camera.lookAt(scene.position);
+
+    const zoom = 8 + Math.sin(time) * 1;
+    camera.position.z = zoom;
+
+    renderer.render(scene, camera);
+}
+
+window.addEventListener('resize', () => {
+    const w = container.clientWidth || window.innerWidth;
+    const h = container.clientHeight || window.innerHeight;
+    camera.aspect = w / h;
+    camera.updateProjectionMatrix();
+    renderer.setSize(w, h);
+});
+
+animate();
+
+})();
+</script>
+</div>
+<!-- STITCH_THREEJS_END:ANIMATION_14 -->
+</div>
+<!-- Dark Overlay for contrast -->
+<div class="absolute inset-0 bg-black/60 bg-gradient-to-t from-black via-black/40 to-transparent z-0 pointer-events-none"></div>
+<div class="relative z-10 flex flex-col items-center justify-center text-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto py-stack-lg w-full">
+<div class="relative w-64 md:w-96 mb-stack-md flex items-center justify-center animate-float animate-fade-in-up opacity-0">
+<div class="absolute inset-0 bg-primary-container/40 blur-[80px] rounded-full scale-110 z-0"></div>
+<img alt="Main Subject" class="w-full h-auto object-contain rounded-2xl shadow-[0_30px_60px_rgba(0,0,0,0.9),0_0_40px_rgba(220,20,60,0.5)] border border-white/10 relative z-10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuJIxY_i0acGVT801I4qG6nIfGVmEOyGSN3Kr6FM082YsHx_ZRKlYkFoHZz0NCCgeISODzfxQ8DVy3jB-o2aj7AF0waYcMJ2fVYbhixEYl40LpscNIlE9EE2tZnfiKfNmFec5AAEE58rU6QRM_J3oDr_fBfVtBlBoUc9ufkHLpbXahlHE86E0TEr1Qe2mzSKPc9QW860JEA9di4sNuP_3vB29jzWOg0G0vr4oY0tRk-5Uxg8j4RCLeOxXeVsqxDzJiIDQ">
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary-container mb-2 tracking-widest uppercase mt-4 animate-fade-in-up delay-100 opacity-0">
+                    WOLFARTH SCHOOL TRADE.
+                </h2>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface font-black uppercase max-w-5xl leading-tight animate-fade-in-up delay-200 opacity-0 drop-shadow-[0_0_15px_rgba(255,255,255,0.2)]">
+                    MASTER THE MARKET.<br>BUILD YOUR FUTURE.
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl mt-stack-md mb-stack-lg animate-fade-in-up delay-300 opacity-0">
+                    Learn professional trading strategies, risk management, market analysis and advanced trading concepts through structured courses, live classes and exclusive VIP education.
+                </p>
+<div class="flex flex-col sm:flex-row gap-stack-sm w-full sm:w-auto animate-fade-in-up delay-400 opacity-0">
+<button class="font-label-md text-label-md bg-primary-container text-on-primary-container px-8 py-4 rounded uppercase font-bold shadow-[0_0_20px_rgba(220,20,60,0.6)] btn-magnetic flex items-center justify-center gap-2">
+                        join telegram vip&nbsp;<span class="material-symbols-outlined">rocket_launch</span>
+</button>
+</div>
+<!-- Stats Grid -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter mt-16 w-full max-w-4xl border-t border-outline-variant/30 pt-8 animate-fade-in-up delay-500 opacity-0">
+<div class="text-center">
+<div class="font-headline-xl text-headline-xl text-secondary-fixed text-glow-primary" style="text-shadow: rgba(0, 251, 251, 0.5) 0px 0px 10px;">10+</div>
+<div class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest mt-2">Courses</div>
+</div>
+<div class="text-center">
+<div class="font-headline-xl text-headline-xl text-primary-container text-glow-primary">100+</div>
+<div class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest mt-2">Lessons</div>
+</div>
+<div class="text-center">
+<div class="font-headline-xl text-headline-xl text-secondary-fixed text-glow-primary" style="text-shadow: rgba(0, 251, 251, 0.5) 0px 0px 10px;">24/7</div>
+<div class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest mt-2">Live Classes</div>
+</div>
+<div class="text-center">
+<div class="font-headline-xl text-headline-xl text-primary-container text-glow-primary">VIP</div>
+<div class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest mt-2">Community</div>
+</div>
+</div>
+</div>
+</section>
+<!-- WHY WOLFARTH? Section -->
+<section class="py-stack-lg px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto relative z-10 bg-black">
+<div class="text-center mb-stack-lg">
+<h2 class="font-headline-xl text-headline-xl text-on-surface uppercase tracking-tight">WHY WOLFARTH?</h2>
+<div class="w-24 h-1 bg-primary-container mx-auto mt-4 shadow-[0_0_10px_rgba(220,20,60,0.8)]"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Card 1 -->
+<div class="glass-panel rounded-xl p-8 relative overflow-hidden group hover:-translate-y-2 transition-all duration-500 hover:shadow-[0_0_30px_rgba(220,20,60,0.15)] cursor-pointer">
+<div class="absolute -top-10 -right-10 w-32 h-32 bg-primary-container/20 rounded-full blur-3xl group-hover:bg-primary-container/40 transition-colors"></div>
+<span class="material-symbols-outlined text-4xl text-primary-container mb-4 block" style="font-variation-settings: &quot;FILL&quot; 1;">workspace_premium</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface mb-2">Professional Education</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Curriculum designed by elite institutional traders focusing on real-world market dynamics.</p>
+</div>
+<!-- Card 2 -->
+<div class="glass-panel rounded-xl p-8 relative overflow-hidden group hover:-translate-y-2 transition-all duration-500 hover:shadow-[0_0_30px_rgba(0,251,251,0.15)] cursor-pointer">
+<div class="absolute -top-10 -right-10 w-32 h-32 bg-secondary-fixed/10 rounded-full blur-3xl group-hover:bg-secondary-fixed/30 transition-colors"></div>
+<span class="material-symbols-outlined text-4xl text-secondary-fixed mb-4 block" style="font-variation-settings: &quot;FILL&quot; 1;">build</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface mb-2">Practical Learning</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Hands-on application of strategies with simulated environments and live market analysis.</p>
+</div>
+<!-- Card 3 -->
+<div class="glass-panel rounded-xl p-8 relative overflow-hidden group hover:-translate-y-2 transition-all duration-500 hover:shadow-[0_0_30px_rgba(220,20,60,0.15)] cursor-pointer">
+<div class="absolute -top-10 -right-10 w-32 h-32 bg-primary-container/20 rounded-full blur-3xl group-hover:bg-primary-container/40 transition-colors"></div>
+<span class="material-symbols-outlined text-4xl text-primary-container mb-4 block" style="font-variation-settings: &quot;FILL&quot; 1;">co_present</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface mb-2">Live Education</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Daily live streams, market breakdowns, and real-time Q&amp;A sessions with senior analysts.</p>
+</div>
+<!-- Card 4 -->
+<div class="glass-panel rounded-xl p-8 relative overflow-hidden group hover:-translate-y-2 transition-all duration-500 hover:shadow-[0_0_30px_rgba(0,251,251,0.15)] cursor-pointer">
+<div class="absolute -top-10 -right-10 w-32 h-32 bg-secondary-fixed/10 rounded-full blur-3xl group-hover:bg-secondary-fixed/30 transition-colors"></div>
+<span class="material-symbols-outlined text-4xl text-secondary-fixed mb-4 block" style="font-variation-settings: &quot;FILL&quot; 1;">groups</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface mb-2">Exclusive Community</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Join a network of driven individuals in our private VIP channels sharing alpha daily.</p>
+</div>
+</div>
+</section>
+<!-- OUR CURRICULUM Section -->
+<section class="py-stack-lg px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto relative z-10 bg-black">
+<div class="text-center mb-stack-lg">
+<h2 class="font-headline-xl text-headline-xl text-on-surface uppercase tracking-tight">OUR CURRICULUM</h2>
+<div class="w-24 h-1 bg-primary-container mx-auto mt-4 shadow-[0_0_10px_rgba(220,20,60,0.8)]"></div>
+</div>
+<div class="max-w-4xl mx-auto w-full">
+<article class="glass-card rounded-xl p-8 md:p-12 flex flex-col md:flex-row gap-stack-lg relative overflow-hidden group border-primary-container/30 shadow-[0_0_50px_rgba(220,20,60,0.2)]" style="transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);">
+<div class="absolute inset-0 bg-gradient-to-br from-primary-container/10 via-transparent to-secondary-fixed/5 pointer-events-none"></div>
+<div class="tilt-inner flex-grow flex flex-col z-10 md:w-3/5">
+<div class="flex items-center gap-2 mb-6">
+<span class="px-3 py-1 bg-primary-container/20 rounded text-primary-fixed-dim font-label-sm text-label-sm border border-primary-container/50 shadow-[0_0_15px_rgba(220,20,60,0.3)] uppercase tracking-widest">Most Popular</span>
+<span class="material-symbols-outlined text-secondary-fixed text-2xl animate-pulse">star</span>
+</div>
+<h2 class="font-display-lg-mobile text-headline-xl text-on-surface mb-4 tracking-tight uppercase">THE ULTIMATE TRADING BUNDLE</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">
+                Get full access to all six core courses: Trading Fundamentals, Technical Analysis, Smart Money Concepts, Risk Management, Trading Psychology, and Advanced Strategy.
+            </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+<div class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-primary-container">check_circle</span>
+<span class="font-label-md">6 Full Courses</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-primary-container">check_circle</span>
+<span class="font-label-md">Lifetime Access</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-primary-container">check_circle</span>
+<span class="font-label-md">VIP Community Access</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-primary-container">check_circle</span>
+<span class="font-label-md">Live Weekly Sessions</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface"><span class="material-symbols-outlined text-primary-container">check_circle</span><span class="font-label-md">VIP Telegram Signals</span></div></div>
+</div>
+<div class="tilt-inner md:w-2/5 flex flex-col justify-center items-center bg-surface-container/40 rounded-xl p-8 border border-outline-variant/20 z-10">
+<div class="text-on-surface-variant line-through font-label-md mb-1">TOTAL VALUE $1,594</div>
+<div class="flex items-start gap-1 mb-6">
+<span class="text-headline-lg text-on-surface mt-2">$</span>
+<span class="text-display-lg-mobile font-black text-primary-container text-glow-primary">200</span>
+</div>
+<button class="w-full bg-primary-container text-white py-4 rounded-lg font-bold text-label-md uppercase tracking-widest transition-all neon-pulse border border-primary-container shadow-[0_0_20px_rgba(220,20,60,0.5)] btn-magnetic">
+                GET THE PACK
+            </button>
+<p class="text-label-sm text-on-surface-variant mt-4 opacity-60">One-time payment. No recurring fees.</p>
+</div>
+</article>
+</div>
+</section>
+<!-- Trading Market Visual Section -->
+<section class="py-stack-lg relative overflow-hidden border-y border-outline-variant/20 bg-black">
+<div class="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black z-10 pointer-events-none"></div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-stack-lg items-center relative z-20">
+<div>
+<h2 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface font-black uppercase leading-tight mb-stack-md">
+                        READ THE MARKET.<br>
+<span class="text-primary-container text-glow-primary">CONTROL YOUR DECISIONS.</span>
+</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-stack-md">
+                        Stop guessing. Learn to read price action, liquidity sweeps, and institutional order flow. We equip you with the terminal-level knowledge required to execute trades with surgical precision.
+                    </p>
+<button class="font-label-md text-label-md bg-transparent border border-secondary-fixed text-secondary-fixed px-6 py-3 rounded uppercase font-bold hover:bg-secondary-fixed/10 transition-colors shadow-[0_0_10px_rgba(0,251,251,0.2)]">
+                        VIEW CURRICULUM
+                    </button>
+</div>
+<!-- Simulated Candlestick Chart -->
+<div class="glass-panel p-6 rounded-xl h-96 flex items-end justify-between space-x-2 relative overflow-hidden">
+<!-- Grid lines -->
+<div class="absolute inset-0 flex flex-col justify-between pointer-events-none opacity-20">
+<div class="w-full h-px bg-secondary-fixed"></div>
+<div class="w-full h-px bg-secondary-fixed"></div>
+<div class="w-full h-px bg-secondary-fixed"></div>
+<div class="w-full h-px bg-secondary-fixed"></div>
+</div>
+<!-- Candles (Wick + Body) -->
+<div class="relative w-8 h-48 flex justify-center items-center" style="animation-delay: 0.1s; color: rgb(42, 42, 42);">
+<div class="absolute w-px h-full bg-current"></div>
+<div class="absolute w-full h-24 bg-current rounded-sm shadow-[0_0_10px_currentColor]"></div>
+</div>
+<div class="relative w-8 h-64 flex justify-center items-center candle-red" style="animation-delay: 0.5s;"><div class="absolute w-px h-full bg-current"></div><div class="absolute w-full h-32 bg-current rounded-sm shadow-[0_0_10px_currentColor] bottom-8"></div></div>
+<div class="relative w-8 h-32 flex justify-center items-center candle-red" style="animation-delay: 0.2s;">
+<div class="absolute w-px h-full bg-current"></div>
+<div class="absolute w-full h-16 bg-current rounded-sm shadow-[0_0_10px_currentColor] top-4"></div>
+</div>
+<div class="relative w-8 h-80 flex justify-center items-center" style="animation-delay: 0.8s; color: rgb(42, 42, 42);"><div class="absolute w-px h-full bg-current"></div><div class="absolute w-full h-40 bg-current rounded-sm shadow-[0_0_10px_currentColor] bottom-12"></div></div>
+<div class="relative w-8 h-56 flex justify-center items-center candle-red" style="animation-delay: 0.4s;">
+<div class="absolute w-px h-full bg-current"></div>
+<div class="absolute w-full h-20 bg-current rounded-sm shadow-[0_0_10px_currentColor] top-10"></div>
+</div>
+<div class="relative w-8 h-72 flex justify-center items-center" style="animation-delay: 1.2s; color: rgb(42, 42, 42);"><div class="absolute w-px h-full bg-current"></div><div class="absolute w-full h-48 bg-current rounded-sm shadow-[0_0_10px_currentColor] bottom-4"></div></div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Shared Component -->
+<footer class="w-full py-12 border-t border-outline-variant/10 bg-black mt-auto relative z-20">
+<div class="max-w-container-max mx-auto px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-stack-md">
+<div class="font-display-lg text-headline-lg-mobile text-primary-container font-bold uppercase tracking-tighter">
+                WOLFARTH
+            </div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary-fixed transition-colors opacity-80 hover:opacity-100 uppercase" href="#">Terms of Service</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary-fixed transition-colors opacity-80 hover:opacity-100 uppercase" href="#">Privacy Policy</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary-fixed transition-colors opacity-80 hover:opacity-100 uppercase" href="#">Risk Disclosure</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary-fixed transition-colors opacity-80 hover:opacity-100 uppercase" href="#">Contact Support</a>
+</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant opacity-60">
+                © 2024 WOLFARTH SCHOOL TRADE. FOR THE ELITE ONLY.
+            </div>
+</div>
+</footer>
+<!-- Vanilla JS for 3D Tilt Effect on Cards -->
+<script>
+        document.querySelectorAll('.glass-card').forEach(card => {
+            card.addEventListener('mousemove', e => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                
+                const rotateX = ((y - centerY) / centerY) * -10; // Max rotation 10deg
+                const rotateY = ((x - centerX) / centerX) * 10;
+                
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = `perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)`;
+            });
+        });
+</script>
+
+
+</body></html>
